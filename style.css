@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Quicksand', 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(145deg, #fce4f0 0%, #f1d2f0 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    width: 100%;
+    background: rgba(255, 245, 250, 0.9);
+    backdrop-filter: blur(8px);
+    padding: 0.8rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px #f5b0d0;
+    border-bottom: 3px solid #e6b0d9;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cute-icon {
+    background: #d9a3c9;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 5px 0 #b27da0;
+}
+
+.nav-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #aa6f9e;
+    text-shadow: 2px 2px 0 #ffe2f0;
+    letter-spacing: 0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #9d5092;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 6px 14px;
+    border-radius: 30px;
+    background: #ffffffb3;
+    border: 2px solid #fbb6da;
+    transition: all 0.1s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-menu a:hover {
+    background: #ffd5ea;
+    color: #772d6b;
+    border-color: #e881ba;
+    transform: scale(1.02);
+}
+
+/* ---------- MAIN ---------- */
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.calc-container {
+    background: #fff0f9;
+    border-radius: 55px 55px 40px 40px;
+    padding: 2rem 1.5rem 1.8rem 1.5rem;
+    width: 380px;
+    box-shadow: 0 20px 0 #d2a0c1, 0 25px 30px #dbb2d0;
+    border: 3px solid white;
+    transition: 0.2s;
+}
+
+/* display */
+.display-box {
+    background: #ffeef7;
+    border-radius: 40px;
+    padding: 20px 18px;
+    margin-bottom: 25px;
+    border: 3px solid white;
+    box-shadow: inset 0 4px 8px #efc2dc, 0 8px 0 #cca7c2;
+}
+
+#calc-display {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: right;
+    color: #992e82;
+    letter-spacing: 1px;
+}
+
+#calc-display::placeholder {
+    color: #e3b3d3;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+/* buttons grid */
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.btn {
+    background: #ffeef8;
+    border: none;
+    padding: 20px 0;
+    border-radius: 40px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #a04d8b;
+    box-shadow: 0 7px 0 #d9a3c9, 0 5px 12px #f0b6d6;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.05s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:active {
+    transform: translateY(5px);
+    box-shadow: 0 2px 0 #c58eb3, 0 5px 10px #e5aac9;
+}
+
+.btn-operator {
+    background: #eec6e3;
+    color: #752b68;
+    font-weight: 700;
+    box-shadow: 0 7px 0 #b889b0;
+}
+
+.btn-equals {
+    background: #d9a6d9;
+    color: white;
+    font-size: 2.2rem;
+    box-shadow: 0 7px 0 #93658c;
+    grid-column: span 2;
+}
+
+.btn-clear {
+    background: #f8cad7;
+    color: #b6457c;
+    font-size: 1.8rem;
+    font-weight: 600;
+    box-shadow: 0 7px 0 #cf97b0;
+}
+
+.btn-zero {
+    grid-column: span 2;
+}
+
+.footer {
+    width: 100%;
+    background: #ffe9f5;
+    padding: 1.2rem 2rem;
+    border-top: 4px solid #eab3d6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #a54d93;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: 0 -5px 12px #f3bfdb;
+}
+
+.footer-left i {
+    color: #c44996;
+    margin: 0 4px;
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-right a {
+    color: #b35f9f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #ffffffb0;
+    padding: 5px 12px;
+    border-radius: 30px;
+    border: 1px solid #f7abd0;
+}
+
+.footer-right a:hover {
+    background: #ffe1f0;
+    color: #87206b;
+}
